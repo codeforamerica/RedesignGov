@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Org name:</b>
+  <%= @project.org_name %>
+</p>
+
+<p>
+  <b>Org desc:</b>
+  <%= @project.org_desc %>
+</p>
+
+<p>
+  <b>Values:</b>
+  <%= @project.valueOne %>, <%= @project.valueTwo %>, <%= @project.valueThree %>
+</p>
+
+<p>
+  <b>Colors:</b>
+  <%= @project.colors %>
+</p>
+
+<p>
+  <b>Deadline:</b>
+  <%= @project.deadline %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @project.comments %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @project.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

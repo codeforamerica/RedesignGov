@@ -7,7 +7,13 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+<ul>
+	<li><%= link_to "users", users_path %></li>
+	<li><%= link_to "comments", comments_path %></li>
+	<li><%= link_to "projects", projects_path %></li>
+	<li><%= link_to "sources", sources_path %></li>
+	<li><%= link_to "submissions", submissions_path %></li>
+</ul>
 <%= yield %>
 
 </body>

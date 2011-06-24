@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  org_name: MyString
+  org_desc: MyString
+  values: MyText
+  colors: MyText
+  deadline: 2011-06-24
+  comments: MyText
+  active: false
+
+two:
+  org_name: MyString
+  org_desc: MyString
+  values: MyText
+  colors: MyText
+  deadline: 2011-06-24
+  comments: MyText
+  active: false

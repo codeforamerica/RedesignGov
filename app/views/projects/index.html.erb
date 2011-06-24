@@ -1,0 +1,35 @@
+<h1>Listing projects</h1>
+
+<table>
+  <tr>
+    <th>Org name</th>
+    <th>Org desc</th>
+    <th>Values</th>
+    <th>Colors</th>
+    <th>Deadline</th>
+    <th>Comments</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.org_name %></td>
+    <td><%= project.org_desc %></td>
+    <td><%= project.valueOne %>, <%= project.valueTwo %>, <%= project.valueThree %></td>
+    <td><%= project.colors %></td>
+    <td><%= project.deadline %></td>
+    <td><%= project.comments %></td>
+    <td><%= project.active %></td>
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Project', new_project_path %>

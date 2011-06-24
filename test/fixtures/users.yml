@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type: 
+  email: MyString
+  password: MyString
+  display_name: MyString
+
+two:
+  type: 
+  email: MyString
+  password: MyString
+  display_name: MyString

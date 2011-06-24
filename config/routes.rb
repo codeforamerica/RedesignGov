@@ -1,4 +1,16 @@
 RedesignGov::Application.routes.draw do
+  resources :users
+
+  resources :fonts
+
+  resources :sources
+
+  resources :comments
+
+  resources :submissions
+
+  resources :projects
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
