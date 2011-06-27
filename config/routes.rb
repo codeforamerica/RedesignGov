@@ -1,4 +1,10 @@
 RedesignGov::Application.routes.draw do
+  get 'projects/autocomplete_font_name'
+
+  root :to => 'projects#index'
+  
+  resources :logotypes
+
   resources :users
 
   resources :fonts
@@ -10,6 +16,7 @@ RedesignGov::Application.routes.draw do
   resources :submissions
 
   resources :projects
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

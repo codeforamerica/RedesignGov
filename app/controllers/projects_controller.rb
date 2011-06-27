@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  autocomplete :font, :name
+    
   # GET /projects
   # GET /projects.xml
   def index

@@ -1,0 +1,25 @@
+<%= form_for(@logotype) do |f| %>
+  <% if @logotype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@logotype.errors.count, "error") %> prohibited this logotype from being saved:</h2>
+
+      <ul>
+      <% @logotype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :font_id %><br />
+    <%= f.text_field :font_id %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

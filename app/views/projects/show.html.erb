@@ -21,6 +21,16 @@
 </p>
 
 <p>
+  <b>Fonts:</b>
+  <ol>
+  <% for logotype in @project.logotypes %>
+	<li><%=h logotype.font.name %></li>
+  <% end %>
+  </ol>
+</p>
+
+
+<p>
   <b>Deadline:</b>
   <%= @project.deadline %>
 </p>

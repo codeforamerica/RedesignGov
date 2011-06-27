@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RedesignGov</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-<ul>
-	<li><%= link_to "users", users_path %></li>
-	<li><%= link_to "comments", comments_path %></li>
-	<li><%= link_to "projects", projects_path %></li>
-	<li><%= link_to "sources", sources_path %></li>
-	<li><%= link_to "submissions", submissions_path %></li>
-</ul>
-<%= yield %>
-
-</body>
+  <head>
+    <title>RedesignGov</title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  	<%= javascript_include_tag 'jquery-1.5.1.min.js', 'jquery-ui-1.8.13.custom.min.js', 'autocomplete-rails.js', 'rails.js'  %>
+  	<%= stylesheet_link_tag 'jquery-ui-1.8.13.custom.css' %>
+  </head>
+  <body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
 </html>

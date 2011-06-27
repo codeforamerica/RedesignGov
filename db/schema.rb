@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110624232410) do
+ActiveRecord::Schema.define(:version => 20110627190806) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(:version => 20110624232410) do
 
   create_table "fonts", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "logotypes", :force => true do |t|
+    t.integer  "font_id"
+    t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,6 +46,16 @@ ActiveRecord::Schema.define(:version => 20110624232410) do
     t.string   "valueOne"
     t.string   "valueTwo"
     t.string   "valueThree"
+  end
+
+  create_table "projects_colors", :force => true do |t|
+    t.integer "project_id"
+    t.integer "color_id"
+  end
+
+  create_table "projects_fonts", :force => true do |t|
+    t.integer "project_id"
+    t.integer "font_id"
   end
 
   create_table "sources", :force => true do |t|
