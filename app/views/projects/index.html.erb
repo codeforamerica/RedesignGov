@@ -6,6 +6,7 @@
     <th>Org desc</th>
     <th>Values</th>
     <th>Colors</th>
+    <th>Fonts</th>
     <th>Deadline</th>
     <th>Comments</th>
     <th>Active</th>
@@ -19,7 +20,16 @@
     <td><%= project.org_name %></td>
     <td><%= project.org_desc %></td>
     <td><%= project.valueOne %>, <%= project.valueTwo %>, <%= project.valueThree %></td>
-    <td><%= project.colors %></td>
+    <td>
+	  <% for scheme in project.schemes %>
+		<%=h scheme.color.hex %><br />
+	  <% end %>
+	</td>
+    <td>
+	  <% for logotype in project.logotypes %>
+		<%=h logotype.font.name %><br />
+	  <% end %>
+	</td>
     <td><%= project.deadline %></td>
     <td><%= project.comments %></td>
     <td><%= project.active %></td>

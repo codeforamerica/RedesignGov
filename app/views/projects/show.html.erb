@@ -17,8 +17,13 @@
 
 <p>
   <b>Colors:</b>
-  <%= @project.colors %>
+  <ol>
+  <% for scheme in @project.schemes %>
+	<li><%=h scheme.color.hex %></li>
+  <% end %>
+  </ol>
 </p>
+
 
 <p>
   <b>Fonts:</b>

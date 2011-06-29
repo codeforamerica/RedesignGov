@@ -27,6 +27,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new.xml
   def new
     @project = Project.new
+    3.times { @project.colors.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -59,7 +60,8 @@ class ProjectsController < ApplicationController
   # PUT /projects/1.xml
   def update
     @project = Project.find(params[:id])
-
+    @project.color_hexes = params[:color_hexes]
+    
     respond_to do |format|
       if @project.update_attributes(params[:project])
         format.html { redirect_to(@project, :notice => 'Project was successfully updated.') }

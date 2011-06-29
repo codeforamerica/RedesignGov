@@ -1,4 +1,6 @@
 RedesignGov::Application.routes.draw do
+  resources :colors
+
   get 'projects/autocomplete_font_name'
 
   root :to => 'projects#index'
